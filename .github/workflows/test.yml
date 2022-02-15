@@ -11,12 +11,7 @@ jobs:
     name: Build and Test
     runs-on: self-hosted
     steps:
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: build # will run `yarn build` command
-      - uses: borales/actions-yarn@v2.3.0
-        with:
-          cmd: jest # will run `yarn test` command
+      - name: Install dependencies
+        run: yarn install 
+      - name: Test with jest
+        run: jest
