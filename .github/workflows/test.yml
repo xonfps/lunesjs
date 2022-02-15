@@ -1,4 +1,4 @@
-name: CI
+name: Test
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Test
+    name: Build and Test
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v2
