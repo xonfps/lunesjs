@@ -9,9 +9,9 @@ on:
 jobs:
   Tests:
 
-  runs-on: self-hosted
+    runs-on: self-hosted
   
-  steps:
+    steps:
     - uses: actions/checkout@v2
     - name: Tests
       run: yarn test --verbose
